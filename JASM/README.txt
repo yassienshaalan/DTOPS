@@ -1,0 +1,22 @@
+############################
+JASM: Joint Aspect Sentiment Document Model 
+############################
+This code was used to train our model "JASM" that simultaneously models both aspects and sentiments from simple input representations. 
+The code can be run either using CPU or GPUs (for faster training). 
+
+(1) Get the data first:
+  - Due to supplementary material size restrictions, we will provide all the datasets later on github
+(2) Preprocessing of Data 
+    a) Extract text and sentiment representation from raw text reviews
+    	-python .\preprocessing\DataPrep_V2.py
+    a) Divide the training and testing data into smaller chunks so that it can be processed in memory with no overflow
+    	-python .\preprocessing\DivideTrainTestFiles.py
+    a) For compatability purposes convert preprocessed input representations into numpy files
+    	-python .\preprocessing\ConvertTextFileToNumpy.py 
+    
+(3) Train the Joint Model unsupervised and fine tune either supervised or unsupervised
+  - Change directries to where you store the preprocessed data by editing all paths in runall_joint_dbm.sh
+  - Train JASM and extract representations using the following command
+  $ ./runall_dbn.sh
+
+This implementation has been tested on Red Hat 7.5, Python 3.5, CUDA 8.0 and tensorflow GPU version 1.11.0

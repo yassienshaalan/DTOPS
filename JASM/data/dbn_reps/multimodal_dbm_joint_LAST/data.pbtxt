@@ -1,0 +1,16 @@
+name: "text_rbm2"
+data {
+  name: "text_hidden2_validation"
+  file_pattern: "validation/text_hidden2-*-of-*.npy"
+  size: 3044
+  dimensions: 1024
+}
+data {
+  name: "text_hidden2_train"
+  file_pattern: "train/text_hidden2-*-of-*.npy"
+  size: 149745
+  dimensions: 1024
+}
+gpu_memory: "4G"
+main_memory: "20G"
+prefix: "./data/dbn_reps/text_rbm2_LAST"

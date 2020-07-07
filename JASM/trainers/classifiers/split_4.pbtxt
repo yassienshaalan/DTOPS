@@ -1,0 +1,14 @@
+optimizer: GRADIENT_DESCENT
+stopcondition {
+  all_processed: false
+  steps: 10000
+}
+train: true
+batchsize: 100
+data_proto: "split_4/data.pbtxt"
+eval_after: 500
+checkpoint_after: 10000
+checkpoint_directory: "classifiers/split_4"
+randomize: true
+data_proto_prefix: "./data/dbn_reps"
+checkpoint_prefix: "./data/dbn_models"

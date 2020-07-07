@@ -1,0 +1,30 @@
+name: "joint"
+data {
+  name: "image_unlabelled"
+  file_pattern: "image/unlabelled/sent_unlabelled-*.npy"
+  size: 150000
+  dimensions: 23964
+}
+data {
+  name: "sent_labelled"
+  file_pattern: "sent/labelled/sent_labelled.npy"
+  size: 3044
+  dimensions: 23964
+}
+data {
+  name: "text_unlabelled"
+  file_pattern: "text/unlabelled/text_unlabelled-*.npy"
+  size: 150000
+  dimensions: 1
+  num_labels: 12762
+}
+data {
+  name: "text_labelled"
+  file_pattern: "text/labelled/text_labelled.npy"
+  size: 3044
+  dimensions: 1
+  num_labels: 12762
+}
+gpu_memory: "4G"
+main_memory: "20G"
+prefix: "./data"

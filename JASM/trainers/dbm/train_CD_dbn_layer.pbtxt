@@ -1,0 +1,13 @@
+optimizer: CD
+stopcondition {
+  all_processed: false
+  steps: 20000
+}
+train: true
+batchsize: 100
+data_proto: "multimodal_dbn_rbm_LAST/input_data.pbtxt"
+eval_after: 5000
+checkpoint_after: 10000
+checkpoint_directory: "./dbn_models"
+randomize: true
+data_proto_prefix: "./dbn_reps"

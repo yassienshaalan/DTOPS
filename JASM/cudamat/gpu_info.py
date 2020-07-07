@@ -1,0 +1,41 @@
+import os
+import re
+import sys
+import subprocess
+import atexit
+
+from gpu_lock import gpu_lock
+from gpu_lock import util
+
+def stringify(x):
+    return "" if x is None else str(x)
+
+def print_info_table():
+    print("| Compute processes:                                                          |")
+    print("|  GPU      PID      User        Process Name                                 |")
+    print("|=============================================================================|")
+
+    for gpu in gpu_lock.enumerate_gpus():
+        gpu_info_string = "|{}    {}    {} {}".format(
+            stringify(gpu.gpu_id).rjust(4),
+            stringify(gpu.owning_process).rjust(6),
+            stringify(gpu.owner_name).ljust(8),
+            util.gpu_run_process_info(gpu.owning_process))
+
+        gpu_info_string = gpu_info_string[:77].ljust(78) + "|"
+
+        print(gpu_info_string)
+
+if __name__ == "__main__":
+    out = subprocess.check_output("nvidia-smi").split("\n")
+    replace = False
+    for line in out:
+        if line.startswith("| Compute processes:"):
+            replace = True
+
+        if replace and line.startswith("+-----"):
+            print_info_table()
+            replace = False
+
+        if not replace:
+            print(line)
