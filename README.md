@@ -1,4 +1,17 @@
-#DOPS: Detector of Temporal Opinion Spam 
+# DTOPS
+## DTOPS (v1.0)
 
-#This code was used to train our model "DOPS" model based on previously extracted aspects and sentiments from simple input representations through our JASM which is included in this repo too. 
+## Detecting Singleton Spams via Learning Deep Anomalous Temporal Aspect-Sentiment Patterns
 
+### Prerequisities
+
+### Getting Started
+
+### Citation
+#### If you use this work, please cite:
+
+  ###### title={Detecting Singleton Spams via Learning Deep Anomalous Temporal Aspect-Sentiment Patterns},
+  ###### author={Shaalan,Yassien, Zhang,J., Chan,J.,Salehi,M.},
+  ###### journal={Still under DMKD review},
+  ###### year={2020}
+###### }
