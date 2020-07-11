@@ -1,2 +1,2 @@
-#Here the time-series joint representations data should reside
+# This is the main data folder for all models 
 
