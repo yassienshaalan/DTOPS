@@ -5,7 +5,7 @@ This code was used to train our model "JASM" that simultaneously models both asp
 The code can be run either using CPU or GPUs (for faster training). 
 
 (1) Get the data first:
-  - Due to supplementary material size restrictions, we will provide all the datasets later on github
+  - Due to supplementary material size restrictions, data needs to be requested seperately from yassien@gmail.com
 (2) Preprocessing of Data 
     a) Extract text and sentiment representation from raw text reviews
     	-python .\preprocessing\DataPrep_V2.py
