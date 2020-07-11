@@ -3,8 +3,15 @@
 
 ## Detecting Singleton Spams via Learning Deep Anomalous Temporal Aspect-Sentiment Patterns
 
-### Prerequisities
-
+###. Prerequisities
+	- Python 3.7
+	- Numpy==1.9.1
+	- scipy==0.14
+	- Tensorflow==1.13.0
+	- Keras==1.0.6 
+	- Scikit-learn==1.18.5
+	- Matplotlib==3.2.2
+	
 ### Getting Started
 
 ### Citation
@@ -15,5 +22,5 @@
   ###### journal={Still under DMKD review},
   ###### year={2020}
 ###### }
-###### This implementation has been implemented using Python 3.7, tensorflow version 1.13.0, Keras version 1.0.6 on a Ubuntu 18.04 LTS Linux machine with 4 CPUs and 64 GB of memory. 
+###### This code has been implemented using Python 3.7, tensorflow version 1.13.0, Keras version 1.0.6 on a Ubuntu 18.04 LTS Linux machine with 4 CPUs and 64 GB of memory. 
 ###### This repo is still under construction.
