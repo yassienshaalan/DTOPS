@@ -3,7 +3,7 @@
 
 ## Detecting Singleton Spams via Learning Deep Anomalous Temporal Aspect-Sentiment Patterns
 
-###. Prerequisities
+### 1. Prerequisities
 	- Python 3.7
 	- Numpy==1.9.1
 	- scipy==0.14
@@ -12,9 +12,9 @@
 	- Scikit-learn==1.18.5
 	- Matplotlib==3.2.2
 	
-### Getting Started
+### 2. Getting Started
 
-### Citation
+### 3. Citation
 #### If you use this work, please cite:
   ###### {
   ###### title={Detecting Singleton Spams via Learning Deep Anomalous Temporal Aspect-Sentiment Patterns},
