@@ -1,0 +1,122 @@
+name: "multimodal_dbn"
+data {
+  name: "sentiment_input_layer"
+  file_pattern: "./Joint_Aspect_Sentiment_Model/Asp_Sent_joint_SemEval_count/spam/data/sentiment/labelled/x_i0_test.npy"
+  size: 320
+  dimensions: 23964
+  stats_file: "./Joint_Aspect_Sentiment_Model/Asp_Sent_joint_SemEval_count/spam/data/"
+}
+data {
+  name: "sentiment_valid"
+  file_pattern: "./Joint_Aspect_Sentiment_Model/Asp_Sent_joint_SemEval_count/spam/data/sentiment/labelled/x_i0_test.npy"
+  size: 320
+  dimensions: 23964
+ }
+data {
+  name: "sentiment_train"
+  file_pattern: "./Joint_Aspect_Sentiment_Model/Asp_Sent_joint_SemEval_count/spam/data/sentiment/unlabelled/x_i0_train.npy"
+  size: 1276
+  dimensions: 23964
+ }
+
+data {
+  name: "text_valid"
+  file_pattern: "./Joint_Aspect_Sentiment_Model/Asp_Sent_joint_SemEval_count/spam/data/text/labelled/x_t0_test.npy"
+  size: 320
+  dimensions: 1
+  num_labels: 12762
+}
+data {
+  name: "text_train"
+  file_pattern: "./Joint_Aspect_Sentiment_Model/Asp_Sent_joint_SemEval_count/spam/data/text/unlabelled/x_t0_train.npy"
+  size: 1276
+  dimensions: 1
+  num_labels: 12762
+}
+data {
+  name: "sentiment_hidden1_valid"
+  file_pattern: "./Joint_Aspect_Sentiment_Model/Asp_Sent_joint_SemEval_count/spam/data/dbn_reps/sentiment_rbm1_LAST/validation/x_i1_test.npy"
+  size: 320
+  dimensions: 2048
+}
+data {
+  name: "sentiment_hidden1_train"
+  file_pattern: "./Joint_Aspect_Sentiment_Model/Asp_Sent_joint_SemEval_count/spam/data/dbn_reps/sentiment_rbm1_LAST/train/x_i1_train.npy"
+  size: 1276
+  dimensions: 2048
+}
+
+data {
+  name: "sentiment_hidden2_valid"
+  file_pattern: "./Joint_Aspect_Sentiment_Model/Asp_Sent_joint_SemEval_count/spam/data/dbn_reps/sentiment_rbm2_LAST/validation/x_i2_test.npy"
+  size: 320
+  dimensions: 1024
+}
+data {
+  name: "sentiment_hidden2_train"
+  file_pattern: "./Joint_Aspect_Sentiment_Model/Asp_Sent_joint_SemEval_count/spam/data/dbn_reps/sentiment_rbm2_LAST/train/x_i2_train.npy"
+  size: 1276
+  dimensions: 1024
+}
+
+data {
+  name: "text_input_layer"
+  file_pattern: "./Joint_Aspect_Sentiment_Model/Asp_Sent_joint_SemEval_count/spam/data/text/labelled/x_t0_test.npy"
+  size: 320
+  dimensions: 12762
+}
+data {
+  name: "text_hidden1_valid"
+  file_pattern: "./Joint_Aspect_Sentiment_Model/Asp_Sent_joint_SemEval_count/spam/data/dbn_reps/text_rbm1_LAST/validation/x_t1_test.npy"
+  size: 320
+  dimensions: 2048
+}
+data {
+  name: "text_hidden1_train"
+  file_pattern: "./Joint_Aspect_Sentiment_Model/Asp_Sent_joint_SemEval_count/spam/data/dbn_reps/text_rbm1_LAST/train/x_t1_train.npy"
+  size: 1276
+  dimensions: 2048
+}
+
+data {
+  name: "text_hidden2_valid"
+  file_pattern: "./Joint_Aspect_Sentiment_Model/Asp_Sent_joint_SemEval_count/spam/data/dbn_reps/text_rbm2_LAST/validation/x_t2_test.npy"
+  size: 320
+  dimensions: 1024
+}
+data {
+  name: "text_hidden2_train"
+  file_pattern: "./Joint_Aspect_Sentiment_Model/Asp_Sent_joint_SemEval_count/spam/data/dbn_reps/text_rbm2_LAST/train/x_t2_train.npy"
+  size: 1276
+  dimensions: 1024
+}
+
+data {
+  name: "joint_hidden_valid"
+  file_pattern: "./Joint_Aspect_Sentiment_Model/Asp_Sent_joint_SemEval_count/spam/data/dbn_reps/joint_rbm_LAST/validation/x_j_test.npy"
+  size: 320
+  dimensions: 2048
+}
+data {
+  name: "joint_hidden_train"
+  file_pattern: "./Joint_Aspect_Sentiment_Model/Asp_Sent_joint_SemEval_count/spam/data/dbn_reps/joint_rbm_LAST/train/x_j_train.npy"
+  size: 1276
+  dimensions: 2048
+}
+
+data {
+  name: "train_labels"
+  file_pattern: "./Joint_Aspect_Sentiment_Model/Asp_Sent_joint_SemEval_count/spam/data/dbn_reps/target_labels/train_labels.npy"
+  size: 1276
+  dimensions: 2
+}
+data {
+  name: "valid_labels"
+  file_pattern: "./Joint_Aspect_Sentiment_Model/Asp_Sent_joint_SemEval_count/spam/data/dbn_reps/target_labels/valid_labels.npy"
+  size: 320
+  dimensions: 2
+}
+
+
+gpu_memory: "4G"
+main_memory: "20G"
