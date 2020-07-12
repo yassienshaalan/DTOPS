@@ -6,9 +6,18 @@ from scipy import spatial
 from statistics import  *
 
 def difference(X,y,absolute=0):
+     """
+        Create a matrix as of difference between two matrices.
+        Args:
+            X: First matrix (2d numpy array) 
+            y: Second matrix (2d numpy array)
+        Attributes:
+            diff_m: The resultant difference metrix (2d numpy array)
+            absolute: Provide absolute difference (0 by default)
+        """
     temp = y
     temp = temp.reshape(y.shape[0],y.shape[2])
-    diff_x = []
+    diff_m = []
     for i in range(len(temp)):
         row = []
         for j in range(len(temp[i])):
@@ -16,8 +25,8 @@ def difference(X,y,absolute=0):
                 row.append(abs(temp[i][j]-X[i][j]))
             else:
                 row.append(X[i][j]-temp[i][j])
-        diff_x.append(row)
-    diff_x = np.array(diff_x)
+        diff_m.append(row)
+    diff_m = np.array(diff_x)
 
     #mean_diff = np.mean(diff_x, axis = 0)
     #print("mean diff on all arr",mean_diff,mean_diff.shape)
