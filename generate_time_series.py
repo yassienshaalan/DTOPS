@@ -41,6 +41,7 @@ def shape_data_new(X, y_true,l_s=10,n_predictions=1):
  
 def readDataConvertToTimeSeries(n_rest,base_directory,l_s=5,l_p=1):
     for i in range(n_rest):
+        #Each resturant data is expected to be order by reviews time-stamp from a previous step
         X_train_o = np.load(base_directory+"X_train_" + str(i) + ".npy")
         X_test_o = np.load(base_directory+"X_test_" + str(i) + ".npy")
         y_train_o = np.load(base_directory+"y_train_label_" + str(i) + ".npy")
