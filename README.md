@@ -1,5 +1,5 @@
-# DTOPS
-## DTOPS (v1.0)
+# DTOpS
+## DTOpS (v1.0)
 
 ## Detecting Singleton Spams via Learning Deep Anomalous Temporal Aspect-Sentiment Patterns
 
