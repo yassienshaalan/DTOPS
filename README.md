@@ -4,13 +4,13 @@
 ## Detecting Singleton Spams via Learning Deep Anomalous Temporal Aspect-Sentiment Patterns
 
 ### 1. Prerequisities
-	- Python 3.7
-	- Numpy==1.9.1
-	- scipy==0.14
-	- Tensorflow==1.13.0
-	- Keras==1.0.6 
-	- Scikit-learn==1.18.5
-	- Matplotlib==3.2.2
+- Python 3.7
+- Numpy==1.9.1
+- scipy==0.14
+- Tensorflow==1.13.0
+- Keras==1.0.6 
+- Scikit-learn==1.18.5
+- Matplotlib==3.2.2
 	
 ### 2. Getting Started
 #### - To run DTOPS you need to do the following:
