@@ -24,7 +24,7 @@
 	
 ### 2. Getting Started
       - Get the data first:
-      - Due to supplementary material size restrictions, data needs to be requested seperately from yassien@gmail.com
+      - Due to supplementary material size restrictions, data can to be requested seperately from yassien@gmail.com
       - Preprocessing of Data 
 		- a) Extract text and sentiment representation from raw text reviews
 	  		- python .\preprocessing\DataPrep_V2.py
