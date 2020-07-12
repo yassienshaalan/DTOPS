@@ -14,7 +14,7 @@ def difference(X,y,absolute=0):
         Attributes:
             diff_m: The resultant difference metrix (2d numpy array)
             absolute: Provide absolute difference (0 by default)
-        """
+     """
     temp = y
     temp = temp.reshape(y.shape[0],y.shape[2])
     diff_m = []
@@ -296,14 +296,25 @@ def training_stage_method_2(X_train,y_train,y_train_labels,lam_tr):
             #break
     
     return iter
-def experiment_1(X_train,y_train,X_test,y_test,y_train_labels,y_test_labels,lamda_list,lam_tr):
+def train_test_dtops_all_data(X_train,y_train,X_test,y_test,y_train_labels,y_test_labels,lamda_list,lam_tr):
+     """
+        Run DTOPS algorithm on all data (not execluding spam from traing set) on a range of lamdas 
+        We print Accuracy, Precsion, Recall & F1 score for each run per lamda in lamda list
+        Args:
+            X_train: Time-Series training data (3d numpy array) (#samples,#timestep,#features)
+            y_train: Target data for time series prediciton (2d numpy array) (#samples,#output)
+            X_test: Time-Series testing data (3d numpy array) (#samples,#timestep,#features)
+            y_test: Target data for time series prediciton (2d numpy array) (#samples,#output)
+            y_train_labels: Training data labels array with values (1: spam, 0:non-spam) (1d numpy array) not used in training just for monitoring
+            y_test_labels: Testing data labels array with values (1: spam, 0:non-spam) (1d numpy array)
+     """
     #Training an LSTM to predict reviews evolution 
     model_num = training_stage_method_2(X_train,y_train,y_train_labels,lam_tr)
     print("The final model to ",model_num)
     #load already trained lstm model
     lstm_model = load_lstm_trained_model(model_num,X_train.shape[2])
     print("*************************")
-    print("After cleaning the lstm")
+    print("Last LSTM after filtering out training data")
     print("Now predict testing testing set",X_test.shape)
     xest_pred = predict_lstm(lstm_model,X_test)
     #diff_x = difference(xest_pred,y_test)
@@ -346,7 +357,18 @@ def measure_similarity(X_pred,y_test):
     print("mean", mean(similarties),"median", median(similarties))
 
     return
-def experiment_2(X_train,y_train,X_test,y_test,y_train_labels,y_test_labels,lamda_list):
+def train_test_dtops_on_normal_data(X_train,y_train,X_test,y_test,y_train_labels,y_test_labels,lamda_list):
+    """
+        Train LSTM on spam-free data then run run DTOPS on a range of lamdas 
+        We print Accuracy, Precsion, Recall & F1 score for each run per lamda in lamda list
+        Args:
+            X_train: Time-Series training data (3d numpy array) (#samples,#timestep,#features)
+            y_train: Target data for time series prediciton (2d numpy array) (#samples,#output)
+            X_test: Time-Series testing data (3d numpy array) (#samples,#timestep,#features)
+            y_test: Target data for time series prediciton (2d numpy array) (#samples,#output)
+            y_train_labels: Training data labels array with values (1: spam, 0:non-spam) (1d numpy array) not used in training just for monitoring
+            y_test_labels: Testing data labels array with values (1: spam, 0:non-spam) (1d numpy array)
+     """
     print("Train LSTM only on clean data")
     print("Filtering spam data from training")
     X_train_filtered = []
@@ -390,7 +412,16 @@ def experiment_2(X_train,y_train,X_test,y_test,y_train_labels,y_test_labels,lamd
    
     return
     
-def experiment_3(X_test,y_test,y_train_labels,y_test_labels,lamda_list,model_num):
+def test_trained_model(X_test,y_test,y_train_labels,y_test_labels,lamda_list,model_num):
+     """
+        Run DTOPS using a previously trained LSTM model on a range of lamdas 
+        We print Accuracy, Precsion, Recall & F1 score for each run per lamda in lamda list
+        Args:
+            X_test: Time-Series testing data (3d numpy array) (#samples,#timestep,#features)
+            y_test: Target data for time series prediciton (2d numpy array) (#samples,#output)
+            y_train_labels: Training data labels array with values (1: spam, 0:non-spam) (1d numpy array) not used in training just for monitoring
+            y_test_labels: Testing data labels array with values (1: spam, 0:non-spam) (1d numpy array)
+     """
     print("Loading saved model LSTM_v",str(model_num))
     lstm_model = load_lstm_trained_model(model_num,X_test.shape[2])
     print("Predicting Data")
@@ -425,18 +456,17 @@ def experiment_3(X_test,y_test,y_train_labels,y_test_labels,lamda_list,model_num
     ##########
    
     return
-'''
-X_train,y_train,X_test,y_test = load_numpy_arrays()
-y_train_labels,y_test_labels = load_labels()
-
-print(X_train.shape,y_train.shape,X_test.shape,y_test.shape,y_train_labels.shape,y_test_labels.shape)
-#experiment_2(X_train,y_train,X_test,y_test,y_train_labels,y_test_labels)
-experiment_1(X_train,y_train,X_test,y_test,y_train_labels,y_test_labels)
-lam_test = 0.0009#0.00035#0.00040
-lamda_list = np.arange(0.00035,0.0015,0.0001)
-for lam_test in lamda_list:
-    input_x = y_test.reshape(y_test.shape[0],y_test.shape[2])
-    print("Now run rave only as is on test",input_x.shape,"for lamda",lam_test)
-    suspected_indices = run_rave(input_x,y_test_labels,lam = lam_test,ae_type=1,shuffle=False)#0.0010)#0.0022)
-#print("suspected_indices final",len(suspected_indices))
-'''
+def test_rvae_only(x_test,y_test_labels,lamda_list):
+     """
+        Run RVAE to detect spam in given data representation on a range of lamdas 
+        We print Accuracy, Precsion, Recall & F1 score for each run
+        Args:
+            x_test: First matrix (3d numpy array) (#samples,#timestep,#features)
+            y_test_labels: Label array with values (1: spam, 0:non-spam) (1d numpy array)
+     """
+    for lam_test in lamda_list:
+         input_x = y_test.reshape(y_test.shape[0],y_test.shape[2])
+         print("Now run rave only as is on test",input_x.shape,"for lamda",lam_test)
+         suspected_indices = run_rave(input_x,y_test_labels,lam = lam_test,ae_type=1,verbose=True)
+     
+    return 
