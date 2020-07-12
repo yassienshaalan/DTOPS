@@ -66,8 +66,11 @@
 	print("Run experiment")
 	test_rvae_only(x_test,y_test_labels,lamda_testing)
 ```
+### 3. License
+	DTOPS is only distributed under MIT License Copyright (c) 2020.
 
-### 3. Citation
+	Contact: Yassien Shaalan (yassien@gmail.com)
+### 4. Citation
 #### If you use this work, please cite:
   ###### {
   ###### title={Detecting Singleton Spams via Learning Deep Anomalous Temporal Aspect-Sentiment Patterns},
