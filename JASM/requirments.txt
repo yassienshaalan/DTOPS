@@ -1,0 +1,17 @@
+tensorflowgpu==1.11.0
+pandas==0.25.3
+pyyaml==5.1.2
+more_itertools==7.2.0
+keras==2.3.1
+numpy==1.9.1
+scipy==0.14
+scikit-learn==1.18.5
+protobuf
+pickle
+glob
+cudamat
+gzip
+logging
+textblob
+nltk
+tqdm
