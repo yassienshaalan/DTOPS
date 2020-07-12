@@ -23,8 +23,7 @@
 - tqdm
 	
 ### 2. Getting Started
-- Get the data first:
-- Due to supplementary material size restrictions, data can to be requested seperately from yassien@gmail.com
+- Get the data first. Refer to data directory and request needed datasets.
 - Preprocessing of Data 
 	-	a) Extract text and sentiment representation from raw text reviews
 	  	-	python .\preprocessing\DataPrep_V2.py
