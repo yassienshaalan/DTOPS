@@ -28,10 +28,10 @@
 - Preprocessing of Data 
 	-	a) Extract text and sentiment representation from raw text reviews
 	  	-	python .\preprocessing\DataPrep_V2.py
-    	-	b) Divide the training and testing data into smaller chunks so that it can be processed in memory with no overflow
-    		-	python .\preprocessing\DivideTrainTestFiles.py
-        -	c) For compatability purposes convert preprocessed input representations into numpy files
-   		-	python .\preprocessing\ConvertTextFileToNumpy.py 
+	- b) Divide the training and testing data into smaller chunks so that it can be processed in memory with no overflow
+ 		-	python .\preprocessing\DivideTrainTestFiles.py
+	- c) For compatability purposes convert preprocessed input representations into numpy files
+		-	python .\preprocessing\ConvertTextFileToNumpy.py 
     
  - Train the Joint Model unsupervised and fine tune either supervised or unsupervised
   	-	Change directries to where you store the preprocessed data by editing all paths in runall_joint_dbm.sh
