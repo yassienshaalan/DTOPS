@@ -14,8 +14,8 @@
 	
 ### 2. Getting Started
 #### - To run DTOPS you need to do the following:
-       - 1) Extracted the aspect-sentiment representation
-       - 2) Prepare the data in time-series format for training (#samples,#time-step,#features), while for testing (#samples,#time-step,#output)
+       - 1) Extracted the aspect-sentiment representation (by running our JASM model. Please refer to JASM directory)
+       - 2) Prepare the data in time-series format for training (#samples,#time-step,#features), while for testing (#samples,#time-step,#output). Please refer to generate time series.py)
 #### - Sample code to run DTOPS on all data (Iteratively cleaning training set, train LSTM, then run RVAE)
 ```python
 	from utilities import load_numpy_arrays,load_labels,load_numpy_arrays_withoutXtrain
