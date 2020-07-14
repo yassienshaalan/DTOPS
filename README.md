@@ -69,7 +69,7 @@
 ```
 ### 3. License
 	DTOPS is only distributed under MIT License Copyright (c) 2020.
-	Contact: [Yassien Shaalan](yassien@gmail.com)
+	Contact: [Yassien Shaalan] <yassien@gmail.com>
 ### 4. Citation
 #### If you use this work, please cite:
   ###### {
