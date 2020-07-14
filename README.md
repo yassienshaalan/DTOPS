@@ -29,7 +29,7 @@
 	X_train,y_train,X_test,y_test = load_numpy_arrays()
 	y_train_labels,y_test_labels = load_labels()
 	print("Data loaded")
-	lamda_testing = [0.00065,0.00075,0.00085]
+	lamda_testing = [0.00065,0.00075,0.00085] #just sample values
 	lamda_training=0.00050
 	print("Run experiment")
 	train_test_dtops_all_data(X_train,y_train,X_test,y_test,y_train_labels,y_test_labels,lamda_testing,lamda_training)
@@ -41,7 +41,7 @@
 	y_train,X_test,y_test = load_numpy_arrays_withoutXtrain()
 	y_train_labels,y_test_labels = load_labels()
 	print("Data loaded")
-	lamda_testing = [0.00065,0.00075,0.00085]
+	lamda_testing = [0.00065,0.00075] #just sample values
 	print("Run experiment")
 	model_num = 3 #the trained model number previously save in trained models directory
 	test_trained_model(X_test,y_test,y_train_labels,y_test_labels,lamda_list,model_num)
@@ -52,7 +52,7 @@
 	X_train,y_train,X_test,y_test = load_numpy_arrays()
 	y_train_labels,y_test_labels = load_labels()
 	print("Data loaded")
-	lamda_testing = [0.00065,0.00075,0.00085]
+	lamda_testing = [0.00065,0.00075,0.00085] #just sample values
 	print("Run experiment")
 	train_test_dtops_on_normal_data(X_train,y_train,X_test,y_test,y_train_labels,y_test_labels,lamda_list)
 ```
@@ -63,13 +63,13 @@
 	y_train,X_test,y_test = load_numpy_arrays_withoutXtrain()
 	y_train_labels,y_test_labels = load_labels()
 	print("Data loaded")
-	lamda_testing = [0.00065,0.00075,0.00085]
+	lamda_testing = [0.00065,0.00075,0.00085] #just sample values
 	print("Run experiment")
 	test_rvae_only(x_test,y_test_labels,lamda_testing)
 ```
 ### 3. License
 	DTOPS is only distributed under MIT License Copyright (c) 2020.
-	Contact: [Yassien Shaalan] <yassien@gmail.com>
+	Contact: Yassien Shaalan (yassien@gmail.com)
 ### 4. Citation
 #### If you use this work, please cite:
   ###### {
