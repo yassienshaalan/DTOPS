@@ -4,6 +4,8 @@
 
 ## Detecting Singleton Spams via Learning Deep Anomalous Temporal Aspect-Sentiment Patterns
 
+-	DTOps is an opinon spam detector model based on analyzing opionon variations over time to detect anomolous patterns. 
+	-	More deatils will be included later to this repo along with a link to the paper describing the whole process. 
 ### 1. Prerequisities
 - Python 3.7
 - Numpy==1.9.1
