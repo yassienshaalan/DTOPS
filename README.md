@@ -70,7 +70,7 @@
 ### 3. License
 	DTOPS is only distributed under MIT License Copyright (c) 2020.
 
-	Contact: Yassien Shaalan (yassien@gmail.com)
+	Contact: [Yassien Shaalan](mailto:yassien@gmail.com?subject=[GitHub] Requesting information Source/Data DTOpS Repo)
 ### 4. Citation
 #### If you use this work, please cite:
   ###### {
