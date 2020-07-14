@@ -1,5 +1,6 @@
 # DTOpS
 ## DTOpS (v1.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Detecting Singleton Spams via Learning Deep Anomalous Temporal Aspect-Sentiment Patterns
 
