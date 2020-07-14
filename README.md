@@ -1,8 +1,11 @@
 # DTOpS
 ## DTOpS (v1.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Detecting Singleton Spams via Learning Deep Anomalous Temporal Aspect-Sentiment Patterns
 
+-	DTOps is an opinon spam detector model based on analyzing opionon variations over time to detect anomolous patterns. 
+	-	More deatils will be included later to this repo along with a link to the paper describing the whole process. 
 ### 1. Prerequisities
 - Python 3.7
 - Numpy==1.9.1
@@ -28,7 +31,7 @@
 	X_train,y_train,X_test,y_test = load_numpy_arrays()
 	y_train_labels,y_test_labels = load_labels()
 	print("Data loaded")
-	lamda_testing = [0.00065,0.00075,0.00085]
+	lamda_testing = [0.00065,0.00075,0.00085] #just sample values
 	lamda_training=0.00050
 	print("Run experiment")
 	train_test_dtops_all_data(X_train,y_train,X_test,y_test,y_train_labels,y_test_labels,lamda_testing,lamda_training)
@@ -40,7 +43,7 @@
 	y_train,X_test,y_test = load_numpy_arrays_withoutXtrain()
 	y_train_labels,y_test_labels = load_labels()
 	print("Data loaded")
-	lamda_testing = [0.00065,0.00075,0.00085]
+	lamda_testing = [0.00065,0.00075] #just sample values
 	print("Run experiment")
 	model_num = 3 #the trained model number previously save in trained models directory
 	test_trained_model(X_test,y_test,y_train_labels,y_test_labels,lamda_list,model_num)
@@ -51,7 +54,7 @@
 	X_train,y_train,X_test,y_test = load_numpy_arrays()
 	y_train_labels,y_test_labels = load_labels()
 	print("Data loaded")
-	lamda_testing = [0.00065,0.00075,0.00085]
+	lamda_testing = [0.00065,0.00075,0.00085] #just sample values
 	print("Run experiment")
 	train_test_dtops_on_normal_data(X_train,y_train,X_test,y_test,y_train_labels,y_test_labels,lamda_list)
 ```
@@ -62,14 +65,13 @@
 	y_train,X_test,y_test = load_numpy_arrays_withoutXtrain()
 	y_train_labels,y_test_labels = load_labels()
 	print("Data loaded")
-	lamda_testing = [0.00065,0.00075,0.00085]
+	lamda_testing = [0.00065,0.00075,0.00085] #just sample values
 	print("Run experiment")
 	test_rvae_only(x_test,y_test_labels,lamda_testing)
 ```
 ### 3. License
-	DTOPS is only distributed under MIT License Copyright (c) 2020.
-
-	Contact: Yassien Shaalan (yassien@gmail.com)
+-	DTOPS is only distributed under MIT License Copyright (c) 2020.
+-	Contact: [Yassien Shaalan](mailto:yassien@gmail.com?subject=[GitHub]%20Requesting%20information%20Source/Data%20DTOpS%20Repo)
 ### 4. Citation
 #### If you use this work, please cite:
   ###### {
