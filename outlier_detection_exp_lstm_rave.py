@@ -321,16 +321,8 @@ def train_test_dtops_all_data(X_train,y_train,X_test,y_test,y_train_labels,y_tes
     diff_x = combination(xest_pred,y_test)
     print("Now detecting spam in testing set")
     print("diff_x  for testing",diff_x.shape)
-    lam_test = 0.00055
-    print("Expected lamda",diff_x.shape[0]*lam_test)
-    #lamda_list = np.arange(0.00035,0.0015,0.0001)
-    #lamda_list = [0.00070,0.00072,0.00074,0.00076,0.00078,0.00080]
-    for lam_test in lamda_list:
-        print("Expected lamda",diff_x.shape[0]*lam_test)
-        suspected_indices = run_rave(diff_x,y_test_labels,lam =lam_test)# 0.0022)
-        #print("suspected_indices final",len(suspected_indices))
-        print("*************************")
-
+    #lam_test = 0.00055
+    #print("Expected lamda",diff_x.shape[0]*lam_test)
     #lamda_list = [0.00070,0.00072,0.00074,0.00076,0.00078,0.00080]
     for lam_test in lamda_list:
         print("Expected lamda",diff_x.shape[0]*lam_test)
