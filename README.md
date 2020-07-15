@@ -70,7 +70,7 @@
 	test_rvae_only(x_test,y_test_labels,lamda_testing)
 ```
 ### 3. License
--	DTOPS is only distributed under MIT License Copyright (c) 2020.
+-	DTOPS is only distributed under Apache-2.0 License Copyright (c) 2020.
 -	Contact: [Yassien Shaalan](mailto:yassien@gmail.com?subject=[GitHub]%20Requesting%20information%20Source/Data%20DTOpS%20Repo)
 ### 4. Citation
 #### If you use this work, please cite:
