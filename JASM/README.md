@@ -1,6 +1,6 @@
 
 ## JASM: Joint Aspect Sentiment Document Model 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ### This code was used to train our model "JASM" that simultaneously models both aspects and sentiments from simple input representations. 
     The code is recommeded to be run on GPU machines. However, can be run on CPU machine, but will be much slower. 
@@ -39,7 +39,7 @@
   	-	Train JASM and extract representations using the following command
   		-	$ ./runall_dbn.sh
 ### 3. License
--	JASM is only distributed under MIT License Copyright (c) 2020.
+-	JASM is only distributed under Apache-2.0 License Copyright (c) 2020.
 -	Contact: [Yassien Shaalan](mailto:yassien@gmail.com?subject=[GitHub]%20Requesting%20information%20Source/Data%20DTOpS%20Repo)
 ### 4. Citation
 #### If you use this work, please cite:
