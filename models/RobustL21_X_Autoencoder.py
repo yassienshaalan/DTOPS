@@ -80,8 +80,11 @@ class RobustL21Autoencoder(object):
 
 
 if __name__ == "__main__":
+    '''
+    #Only for testing purposes
     x = np.load(r"../data/data.npk")[:500]
     with tf.Session() as sess:
         rae = RobustL21Autoencoder(sess=sess,input_shape=x.shape,lambda_=20, layers_sizes=[x.shape[1], int(x.shape[1] * 0.5)],type=0)
 
         L, S = rae.fit(x, sess=sess, inner_iteration=60, iteration=5, verbose=True)
+    '''
