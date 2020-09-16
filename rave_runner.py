@@ -59,7 +59,6 @@ def evaluate_rave_performance(L,S,y):
     #print("Read","L",L.shape,"S",S.shape,"y",y.shape)
     #rows_with_zeros = np.any(S == 0, axis=1)
     tol=0.01
-    #np.save("/media/gd/Jinxy/rave_lstm/S.npy", S)
     #print("Saved S")
     S_t = np.zeros_like(S)
     #print("S_t",S_t.shape,S.shape)
