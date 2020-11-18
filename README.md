@@ -4,7 +4,7 @@
 
 ## Detecting Singleton Spams via Learning Deep Anomalous Temporal Aspect-Sentiment Patterns
 
--	Customer reviews are an essential source of information to consumers. 
+Customer reviews are an essential source of information to consumers. 
 Meanwhile, opinion spams spread widely and the detection of spam reviews becomes critically important for ensuring the integrity of the echo system of online reviews.
 Singleton spam reviews – one-time reviews – have spread widely of late as spammers can create multiple accounts to purposefully cheat the system. 
 Most available techniques fail to detect this cunning form of malicious reviews, mainly due to the scarcity of behaviour trails left behind by singleton spammers. 
