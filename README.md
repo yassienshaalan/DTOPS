@@ -4,8 +4,18 @@
 
 ## Detecting Singleton Spams via Learning Deep Anomalous Temporal Aspect-Sentiment Patterns
 
--	DTOps is an opinon spam detector model based on analyzing opionon variations over time to detect anomolous patterns. 
-	-	More deatils will be included later to this repo along with a link to the paper describing the whole process. 
+-	Customer reviews are an essential source of information to consumers. 
+Meanwhile, opinion spams spread widely and the detection of spam reviews becomes critically important for ensuring the integrity of the echo system of online reviews.
+Singleton spam reviews – one-time reviews – have spread widely of late as spammers can create multiple accounts to purposefully cheat the system. 
+Most available techniques fail to detect this cunning form of malicious reviews, mainly due to the scarcity of behaviour trails left behind by singleton spammers. 
+Available approaches also require extensive feature engineering, expensive manual annotation and are less generalizable. 
+Based on our thorough study of spam reviews, it was found that genuine opinions are usually directed uniformly towards important aspects of entities. 
+In contrast, spammers attempt to counter the consensus towards these aspects while covering their malicious intent by adding more text but on less important aspects. 
+Additionally, spammers usually target specific time periods along products' lifespan to cause maximum bias to the public opinion. Based on these observations, we present an unsupervised singleton spam review detection model that runs in two steps. 
+Unsupervised deep aspect-level sentiment model employing deep Boltzmann machines (DBMs) first learns fine-grained opinion representations from review texts. 
+Then, an LSTM network is trained on opinion learned representation to track the evolution of opinions through the fluctuation of sentiments in a temporal context, followed by the application of a Robust Variational Autoencoder to identify spam instances. Experiments on three benchmark datasets widely used in the literature showed that our approach outperforms strong state-of-the-art baselines.
+
+More deatils will be included later to this repo along with a link to the paper once it's out of the Springer's production. 
 ### 1. Prerequisities
 - Python 3.7
 - Numpy==1.9.1
