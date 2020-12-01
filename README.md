@@ -2,7 +2,7 @@
 ## DTOpS (v1.0)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-## Detecting Singleton Spams via Learning Deep Anomalous Temporal Aspect-Sentiment Patterns
+## Detecting Singleton Spams in Reviews via Learning Deep Anomalous Temporal Aspect-Sentiment Patterns
 
 Customer reviews are an essential source of information to consumers. 
 Meanwhile, opinion spams spread widely and the detection of spam reviews becomes critically important for ensuring the integrity of the echo system of online reviews.
