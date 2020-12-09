@@ -87,7 +87,7 @@ More deatils will be included later to this repo along with a link to the paper 
 {
 ```  
   title={Detecting Singleton Spams via Learning Deep Anomalous Temporal Aspect-Sentiment Patterns},
-  author={Shaalan,Yassien, Zhang, J., Chan, J., Salehi, M.},
+  author={Shaalan,Yassien, Zhang, X., Chan, J., Salehi, M.},
   journal={Data Mining and Knowledge Discovery (DMKD)},
   pages = {1-56},
   year={2020}
