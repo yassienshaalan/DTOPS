@@ -90,7 +90,8 @@ Here is a link to the paper on springer [Detecting singleton spams in reviews vi
   author={Shaalan,Yassien, Zhang, X., Chan, J., Salehi, M.},
   journal={Data Mining and Knowledge Discovery (DMKD)},
   pages = {1-56},
-  year={2020}
+  url={https://doi.org/10.1007/s10618-020-00725-5},
+  year={2021}
 ```
 }
 
