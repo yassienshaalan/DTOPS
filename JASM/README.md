@@ -46,7 +46,9 @@
   ###### {
   ###### title={Detecting Singleton Spams via Learning Deep Anomalous Temporal Aspect-Sentiment Patterns},
   ###### author={Shaalan,Yassien, Zhang, J., Chan, J., Salehi, M.},
-  ###### journal={Still under DMKD review},
-  ###### year={2020}
+  ###### journal={Data Mining and Knowledge Discovery (DMKD)},
+  ###### url={https://doi.org/10.1007/s10618-020-00725-5},
+  ###### pages={1-56},
+  ###### year={2021}
 ###### }
 ##### This implementation has been tested on Red Hat 7.5, Python 3.5, CUDA 8.0 and tensorflow GPU version 1.11.0
