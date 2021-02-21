@@ -89,7 +89,9 @@ Here is a link to the paper on springer [Detecting singleton spams in reviews vi
   title={Detecting Singleton Spams via Learning Deep Anomalous Temporal Aspect-Sentiment Patterns},
   author={Shaalan,Yassien, Zhang, X., Chan, J., Salehi, M.},
   journal={Data Mining and Knowledge Discovery (DMKD)},
-  pages = {1-56},
+  volume = {35},
+  issue = {2},
+  pages = {450–504},
   url={https://doi.org/10.1007/s10618-020-00725-5},
   year={2021}
 ```
